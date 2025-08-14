@@ -1,0 +1,25 @@
+Postman İle Test Adımları:
+
+1. Postman'i açın
+2. Yeni bir GET isteği oluşturun
+3. URL: http://localhost:8000/api/my-instruments
+4. Headers sekmesinde:
+   - Accept: application/json
+   - Authorization: Bearer 14|47L5HH3mUGSYlAIMXCRDVgeTG2kyVsGJlIdGzrl06d642a46
+
+5. Send butonuna tıklayın
+
+Alternatif olarak, şu curl komutunu terminalde çalıştırabilirsiniz:
+
+```
+curl --location "http://localhost:8000/api/my-instruments" \
+--header "Accept: application/json" \
+--header "Authorization: Bearer 14|47L5HH3mUGSYlAIMXCRDVgeTG2kyVsGJlIdGzrl06d642a46"
+```
+
+Bu istek başarısız olursa, lütfen şunları kontrol edin:
+1. Laravel development server çalışıyor mu? (php artisan serve)
+2. Token hala geçerli mi?
+3. Controller namespace'i doğru mu?
+
+Hata devam ederse, sunucu loglarını (storage/logs/laravel.log) kontrol edin.
